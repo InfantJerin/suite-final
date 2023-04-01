@@ -1,4 +1,4 @@
-package com.crm.controller;
+package com.crm.registration;
 
 import com.crm.registration.RegistrationRequest;
 import com.crm.registration.RegistrationService;
