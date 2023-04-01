@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-@Service
 @AllArgsConstructor
+@Service
 public class AppUserService implements UserDetailsService {
     // 1. Create a appUser and save it to the DB using the repository
     // 2. Check if the User exists using the Repository
@@ -31,7 +31,7 @@ public class AppUserService implements UserDetailsService {
             throw new IllegalStateException("email already taken"); //TODO move the error/Exceptions to a separate file
         }
 
-        //encoding the password before saving it in DB
+        // encoding the password before saving it in DB
         String encodedPassword = bCryptPasswordEncoder.encode(appUser.getPassword());
         appUser.setPassword(encodedPassword);
         appUserRepository.save(appUser);

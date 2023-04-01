@@ -22,8 +22,8 @@ public class RegistrationController {
 
     @PostMapping
     public String register(@RequestBody RegistrationRequest request) {
-        return "hello wolds";
-//        return registrationService.register(request);
+        System.out.println("This is to test");
+        return registrationService.register(request);
     }
 
 
